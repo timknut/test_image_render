@@ -1,6 +1,8 @@
 library(plyr)
+
+
 files <- list.files("images/CopyOfmanhattan_plots/")
-files <- str_split(files, "_")
+files <- strsplit(files, "_")
 traits <- unlist(llply(1:length(files), function (x) paste(unlist(files[x])[1:2], collapse = "_")))
 
 shinyUI(
